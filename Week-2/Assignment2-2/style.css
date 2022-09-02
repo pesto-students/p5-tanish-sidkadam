@@ -1,0 +1,89 @@
+body{
+   margin: 0;
+}
+
+h1{
+    position: relative;
+    left:225px;
+    top:50px;
+    z-index: -1;
+}
+.container{
+    width: 600px;
+    height: 600px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:0 auto;
+    text-align: center;
+
+}
+@keyframes rotation{
+    100% {transform: rotate(90deg);
+        transform-origin:top left;
+    }
+}
+
+.rotation:hover{
+    animation: rotation;
+}
+@keyframes rotation2{
+    100% {transform: rotate(-90deg);
+        transform-origin:top right;
+    }
+}
+@keyframes rotation3{
+    100% {transform: rotate(-90deg);
+        transform-origin:bottom left;
+    }
+}
+@keyframes rotation4{
+    100% {transform: rotate(90deg);
+        transform-origin:bottom right;
+    }
+}
+
+.red-div{
+    background-color: red;
+    width:100px;
+    height:100px;
+    animation: rotation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; 
+    
+}
+
+
+.blue-div{
+    background-color: blue;
+    width:100px;
+    height:100px;
+    position: relative;
+    top:100px;
+    left: 100px;
+    animation: rotation3;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; 
+
+}
+
+.yellow-div{
+    background-color: green;
+    width:100px;
+    height:100px;
+    position: relative;
+    top:100px;
+    right:100px;
+    animation: rotation4;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; 
+}
+
+.green-div{
+    background-color: yellow;
+    width:100px;
+    height:100px;
+    animation: rotation2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; 
+}
